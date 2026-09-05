@@ -1,0 +1,695 @@
+:root {
+    --primary: #6366f1;
+    --primary-dark: #7c3aed;
+    --text-dark: #18202f;
+    --text: #374151;
+    --text-light: #8a94a6;
+    --border: #e5e7eb;
+    --danger: #ef4444;
+    --success: #16a34a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    color: var(--text-dark);
+    background: #f7f8fc;
+    -webkit-font-smoothing: antialiased;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+.register-page {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.welcome-panel {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    padding: clamp(35px, 5vw, 70px);
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background: radial-gradient(circle at 10% 10%, rgba(102, 126, 234, 0.65), transparent 35%), radial-gradient(circle at 90% 80%, rgba(129, 140, 248, 0.35), transparent 35%), linear-gradient(145deg, #111827, #18233b 45%, #202d50);
+}
+
+.decoration {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.decoration-1 {
+    width: 450px;
+    height: 450px;
+    top: -150px;
+    right: -210px;
+}
+
+.decoration-2 {
+    width: 300px;
+    height: 300px;
+    bottom: -120px;
+    right: -100px;
+    background: rgba(255, 255, 255, 0.025);
+}
+
+.decoration-3 {
+    width: 180px;
+    height: 180px;
+    top: 55%;
+    left: 30%;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.brand,
+.mobile-brand {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    position: relative;
+    z-index: 2;
+    font-size: 1.35rem;
+    font-weight: 750;
+}
+
+.brand-logo {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    border-radius: 13px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.35);
+}
+
+.brand-logo svg {
+    width: 24px;
+    height: 24px;
+}
+
+.welcome-content {
+    max-width: 580px;
+    margin: auto 0;
+    position: relative;
+    z-index: 2;
+}
+
+.badge {
+    width: fit-content;
+    margin-bottom: 24px;
+    padding: 8px 13px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 100px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #e0e7ff;
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+.badge-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #7dd3fc;
+}
+
+.welcome-content h1 {
+    max-width: 600px;
+    font-size: clamp(2.7rem, 5vw, 4.8rem);
+    line-height: 1.04;
+    letter-spacing: -2.5px;
+}
+
+.welcome-content h1 span {
+    display: block;
+    color: #a5b4fc;
+}
+
+.welcome-content > p {
+    max-width: 520px;
+    margin-top: 23px;
+    color: #b8c1d4;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.features {
+    margin-top: 35px;
+    display: grid;
+    gap: 16px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.feature-icon {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 11px;
+    color: #c7d2fe;
+    background: rgba(99, 102, 241, 0.15);
+}
+
+.feature strong {
+    display: block;
+    margin-bottom: 2px;
+    font-size: 0.9rem;
+}
+
+.feature p {
+    color: #97a3ba;
+    font-size: 0.8rem;
+}
+
+.welcome-footer {
+    position: relative;
+    z-index: 2;
+    color: #71809b;
+    font-size: 0.76rem;
+}
+
+.register-container {
+    min-height: 100vh;
+    padding: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #ffffff, #f8f9fc);
+}
+
+.register-box {
+    width: 100%;
+    max-width: 510px;
+}
+
+.mobile-brand {
+    display: none;
+    margin-bottom: 25px;
+    color: var(--text-dark);
+}
+
+.register-header {
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.register-icon {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 14px;
+    background: #eef2ff;
+    color: var(--primary);
+}
+
+.register-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.register-header h2 {
+    margin-bottom: 4px;
+    font-size: 1.75rem;
+    font-weight: 750;
+    letter-spacing: -0.8px;
+}
+
+.register-header p {
+    color: var(--text-light);
+    font-size: 0.87rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 13px;
+}
+
+.form-group {
+    margin-bottom: 13px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--text);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.input-container {
+    min-height: 48px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 1.5px solid var(--border);
+    border-radius: 12px;
+    background: white;
+    transition: 0.2s;
+}
+
+.input-container:focus-within {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.07);
+}
+
+.input-container.error {
+    border-color: var(--danger);
+}
+
+.input-icon {
+    width: 43px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    color: #9ca3af;
+}
+
+.input-icon svg {
+    width: 17px;
+    height: 17px;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 12px 42px 12px 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #1f2937;
+    font-size: 0.86rem;
+}
+
+.input-container input::placeholder {
+    color: #b4bac5;
+}
+
+.toggle-password {
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    right: 4px;
+    display: grid;
+    place-items: center;
+    border: none;
+    border-radius: 8px;
+    background: transparent;
+    color: #9ca3af;
+    cursor: pointer;
+}
+
+.toggle-password:hover {
+    background: #f5f6ff;
+    color: var(--primary);
+}
+
+.toggle-password svg {
+    width: 17px;
+    height: 17px;
+}
+
+.error-message {
+    display: block;
+    min-height: 14px;
+    margin-top: 3px;
+    color: var(--danger);
+    font-size: 0.68rem;
+}
+
+.password-strength {
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.strength-bars {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+}
+
+.strength-bars span {
+    height: 4px;
+    border-radius: 20px;
+    background: #e5e7eb;
+    transition: 0.2s;
+}
+
+.password-strength p {
+    min-width: 105px;
+    color: #9ca3af;
+    font-size: 0.65rem;
+}
+
+.terms {
+    margin: 2px 0 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    color: #667085;
+    font-size: 0.74rem;
+    line-height: 1.45;
+    cursor: pointer;
+}
+
+.terms input {
+    display: none;
+}
+
+.checkmark {
+    width: 17px;
+    height: 17px;
+    margin-top: 1px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border: 1.5px solid #d5d9e2;
+    border-radius: 5px;
+}
+
+.terms input:checked + .checkmark {
+    border-color: var(--primary);
+    background: var(--primary);
+}
+
+.terms input:checked + .checkmark::after {
+    content: "";
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: translateY(-1px) rotate(45deg);
+}
+
+.terms a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.terms-error {
+    margin-bottom: 7px;
+}
+
+.register-button {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+    font-size: 0.88rem;
+    font-weight: 650;
+    box-shadow: 0 10px 25px rgba(99, 102, 241, 0.23);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.register-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(99, 102, 241, 0.32);
+}
+
+.register-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.button-arrow {
+    width: 17px;
+    height: 17px;
+}
+
+.loader {
+    width: 18px;
+    height: 18px;
+    display: none;
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: loading 0.7s linear infinite;
+}
+
+@keyframes loading {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.form-status {
+    display: none;
+    margin-top: 10px;
+    padding: 9px 11px;
+    border-radius: 9px;
+    text-align: center;
+    font-size: 0.76rem;
+}
+
+.form-status.success {
+    display: block;
+    color: #15803d;
+    background: #ecfdf3;
+    border: 1px solid #bbf7d0;
+}
+
+.form-status.error {
+    display: block;
+    color: #b91c1c;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+}
+
+.login-text {
+    margin-top: 17px;
+    text-align: center;
+    color: #8b94a5;
+    font-size: 0.78rem;
+}
+
+.login-text a {
+    color: var(--primary);
+    font-weight: 650;
+    text-decoration: none;
+}
+
+@media (max-width: 900px) {
+    .register-page {
+        display: block;
+    }
+
+    .welcome-panel {
+        display: none;
+    }
+
+    .register-container {
+        min-height: 100svh;
+        padding: 25px 20px;
+    }
+
+    .register-box {
+        max-width: 470px;
+    }
+
+    .mobile-brand {
+        display: flex;
+    }
+}
+
+@media (max-width: 520px) {
+    body,
+    .register-container {
+        background: #ffffff;
+    }
+
+    .register-container {
+        padding: 16px 15px 22px;
+        align-items: flex-start;
+    }
+
+    .register-box {
+        max-width: 370px;
+        margin: auto;
+    }
+
+    .mobile-brand {
+        margin-bottom: 20px;
+        gap: 8px;
+        font-size: 1.1rem;
+    }
+
+    .brand-logo {
+        width: 34px;
+        height: 34px;
+        border-radius: 9px;
+    }
+
+    .brand-logo svg {
+        width: 19px;
+        height: 19px;
+    }
+
+    .register-header {
+        margin-bottom: 19px;
+        gap: 10px;
+    }
+
+    .register-icon {
+        width: 41px;
+        height: 41px;
+        border-radius: 11px;
+    }
+
+    .register-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .register-header h2 {
+        font-size: 1.35rem;
+    }
+
+    .register-header p {
+        font-size: 0.74rem;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .form-group {
+        margin-bottom: 9px;
+    }
+
+    .form-group label {
+        margin-bottom: 5px;
+        font-size: 0.73rem;
+    }
+
+    .input-container {
+        min-height: 43px;
+        border-radius: 10px;
+    }
+
+    .input-icon {
+        width: 38px;
+    }
+
+    .input-icon svg {
+        width: 15px;
+        height: 15px;
+    }
+
+    .input-container input {
+        padding: 10px 38px 10px 0;
+        font-size: 0.79rem;
+    }
+
+    .toggle-password {
+        width: 33px;
+        height: 33px;
+    }
+
+    .toggle-password svg {
+        width: 15px;
+        height: 15px;
+    }
+
+    .error-message {
+        min-height: 11px;
+        font-size: 0.62rem;
+    }
+
+    .password-strength {
+        margin-top: 4px;
+    }
+
+    .strength-bars span {
+        height: 3px;
+    }
+
+    .password-strength p {
+        min-width: 92px;
+        font-size: 0.58rem;
+    }
+
+    .terms {
+        font-size: 0.67rem;
+    }
+
+    .register-button {
+        height: 44px;
+        border-radius: 10px;
+        font-size: 0.8rem;
+    }
+
+    .button-arrow {
+        width: 15px;
+        height: 15px;
+    }
+
+    .login-text {
+        margin-top: 14px;
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .register-container {
+        padding: 13px 12px 18px;
+    }
+
+    .register-header {
+        margin-bottom: 15px;
+    }
+
+    .mobile-brand {
+        margin-bottom: 17px;
+    }
+
+    .form-group {
+        margin-bottom: 7px;
+    }
+
+    .input-container {
+        min-height: 41px;
+    }
+
+    .register-button {
+        height: 42px;
+    }
+}

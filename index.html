@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catálogo de interfaces frontend responsive desarrolladas con HTML5, CSS3 y JavaScript.">
+  <meta name="author" content="Favio Diaz">
+  <meta name="theme-color" content="#070b14">
+  <title>Favio UI | Interfaces Frontend</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a href="#inicio" class="logo">Favio<span>UI</span></a>
+      <nav class="nav-links">
+        <a href="#inicio">Inicio</a>
+        <a href="#interfaces">Interfaces</a>
+        <a href="https://github.com/diaz-favio" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-content">
+        <span class="hero-label">FRONTEND UI COLLECTION</span>
+        <h1>Interfaces <span>Frontend</span></h1>
+        <p>Colección de interfaces web responsive desarrolladas con HTML5, CSS3 y JavaScript. Diseños preparados para computadora, tablet y dispositivos móviles.</p>
+        <div class="hero-actions">
+          <a href="#interfaces" class="btn btn-primary">Explorar interfaces <span>↓</span></a>
+          <a href="https://github.com/diaz-favio" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Ver GitHub <span>↗</span></a>
+        </div>
+      </div>
+    </section>
+    <section class="interfaces-section" id="interfaces">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-title">
+            <span class="section-label">CATÁLOGO FRONTEND</span>
+            <h2>Mis interfaces</h2>
+            <p>Explora la colección, busca una interfaz o filtra por categoría y disponibilidad.</p>
+          </div>
+          <div class="catalog-stats">
+            <div class="catalog-stat">
+              <strong id="totalInterfaces">0</strong>
+              <span>Plantillas</span>
+            </div>
+            <div class="catalog-stat">
+              <strong id="readyInterfaces" class="stat-ready">0</strong>
+              <span>Disponibles</span>
+            </div>
+            <div class="catalog-stat">
+              <strong id="pendingInterfaces" class="stat-pending">0</strong>
+              <span>Próximas</span>
+            </div>
+          </div>
+        </div>
+        <div class="search-container">
+          <div class="search-box">
+            <span class="search-icon">⌕</span>
+            <input type="search" id="searchInput" placeholder="Buscar interfaz, categoría..." autocomplete="off" aria-label="Buscar interfaz">
+          </div>
+        </div>
+        <div class="filter-area">
+          <span class="filter-title">Categorías</span>
+          <div class="filters" id="filters"></div>
+        </div>
+        <div class="status-filter-section">
+          <span class="filter-title">Estado</span>
+          <div class="status-filters" id="statusFilters">
+            <button type="button" class="status-filter-btn active" data-status="Todos">Todos</button>
+            <button type="button" class="status-filter-btn" data-status="ready"><i class="ready-dot"></i> Disponibles</button>
+            <button type="button" class="status-filter-btn" data-status="pending"><i class="pending-dot"></i> Próximamente</button>
+          </div>
+        </div>
+        <div class="results-info">
+          <span id="resultsCount">0 resultados</span>
+        </div>
+        <div class="interfaces-grid" id="interfacesGrid"></div>
+        <div class="empty-state" id="emptyState" hidden>
+          <div class="empty-icon">⌕</div>
+          <h3>No encontramos interfaces</h3>
+          <p>Prueba con otro nombre, categoría o estado.</p>
+        </div>
+        <div class="pagination" id="pagination"></div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer-content">
+      <a href="#inicio" class="logo">Favio<span>UI</span></a>
+      <p>Interfaces Frontend · HTML5 · CSS3 · JavaScript</p>
+      <a href="https://github.com/diaz-favio" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub ↗</a>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
