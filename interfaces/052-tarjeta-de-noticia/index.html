@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Interfaz moderna y responsive de tarjetas de noticias.">
+  <title>Tarjeta de Noticia</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container navbar">
+      <a href="../../" class="brand">
+        <span class="brand-mark">N</span>
+        <span>Mundo <span>te informa</span></span>
+      </a>
+      <nav class="nav-links">
+        <button class="nav-category active" data-category="Todas">Todas</button>
+        <button class="nav-category" data-category="Tecnología">Tecnología</button>
+        <button class="nav-category" data-category="Negocios">Negocios</button>
+        <button class="nav-category" data-category="Diseño">Diseño</button>
+      </nav>
+      <button type="button" class="menu-button" id="menuButton" aria-label="Abrir menú">☰</button>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="container hero-content">
+        <span class="eyebrow">ACTUALIDAD</span>
+        <h1>Historias que vale la pena leer.</h1>
+        <p>Una interfaz de tarjetas de noticias moderna, adaptable a diferentes dispositivos y con interacción mediante JavaScript.</p>
+      </div>
+    </section>
+    <section class="controls-section">
+      <div class="container controls">
+        <div class="search-box">
+          <span>⌕</span>
+          <input type="search" id="searchInput" placeholder="Buscar noticia..." autocomplete="off">
+        </div>
+        <div class="result-text">
+          <strong id="resultCount">0</strong>
+          <span>noticias</span>
+        </div>
+      </div>
+    </section>
+    <section class="news-section">
+      <div class="container">
+        <div class="news-grid" id="newsGrid"></div>
+        <div class="empty-state" id="emptyState" hidden>
+          <div class="empty-icon">⌕</div>
+          <h2>No encontramos noticias</h2>
+          <p>Intenta con otra palabra o categoría.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div class="modal" id="newsModal" aria-hidden="true">
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <article class="modal-card">
+      <button type="button" class="modal-close" id="modalClose" aria-label="Cerrar">×</button>
+      <div class="modal-image" id="modalImage"></div>
+      <div class="modal-content">
+        <span class="modal-category" id="modalCategory"></span>
+        <h2 id="modalTitle"></h2>
+        <div class="modal-meta">
+          <span id="modalAuthor"></span>
+          <span>•</span>
+          <span id="modalDate"></span>
+        </div>
+        <p id="modalDescription"></p>
+        <div class="modal-actions">
+          <button type="button" class="secondary-button" id="shareModalButton">Compartir</button>
+          <button type="button" class="primary-button" id="closeArticleButton">Finalizar lectura</button>
+        </div>
+      </div>
+    </article>
+  </div>
+  <div class="toast" id="toast">Enlace copiado</div>
+  <footer class="footer">
+    <div class="container footer-content">
+      <a href="../../" class="brand">
+        <span class="brand-mark">N</span>
+        <span>Mundo <span>te informa</span></span>
+      </a>
+      <p>Interfaz frontend · HTML · CSS · JavaScript</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

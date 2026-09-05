@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Calendario responsive con gestión de citas desarrollado con HTML, CSS y JavaScript.">
+  <title>Calendario con Citas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="header-left">
+        <a href="../../" class="brand">
+          <span class="brand-icon">A</span>
+          <span>Agenda<span>Flow</span></span>
+        </a>
+      </div>
+      <div class="header-actions">
+        <button type="button" class="secondary-button" id="todayButton">Hoy</button>
+        <button type="button" class="primary-button" id="newAppointmentButton">+ Nueva cita</button>
+      </div>
+    </header>
+    <main class="main">
+      <section class="calendar-panel">
+        <div class="calendar-header">
+          <div>
+            <span class="eyebrow">CALENDARIO</span>
+            <h1 id="currentMonth">Septiembre 2026</h1>
+          </div>
+          <div class="month-controls">
+            <button type="button" class="icon-button" id="previousMonth" aria-label="Mes anterior">←</button>
+            <button type="button" class="icon-button" id="nextMonth" aria-label="Mes siguiente">→</button>
+          </div>
+        </div>
+        <div class="weekdays">
+          <span>Lun</span>
+          <span>Mar</span>
+          <span>Mié</span>
+          <span>Jue</span>
+          <span>Vie</span>
+          <span>Sáb</span>
+          <span>Dom</span>
+        </div>
+        <div class="calendar-grid" id="calendarGrid"></div>
+      </section>
+      <aside class="appointments-panel">
+        <div class="appointments-header">
+          <div>
+            <span class="eyebrow">AGENDA</span>
+            <h2 id="selectedDateTitle">Hoy</h2>
+          </div>
+          <span class="appointment-count" id="appointmentCount">0 citas</span>
+        </div>
+        <div class="status-filters">
+          <button type="button" class="status-filter active" data-status="all">Todas</button>
+          <button type="button" class="status-filter" data-status="confirmed">Confirmadas</button>
+          <button type="button" class="status-filter" data-status="pending">Pendientes</button>
+        </div>
+        <div class="appointments-list" id="appointmentsList"></div>
+        <div class="empty-state" id="emptyState" hidden>
+          <div class="empty-icon">📅</div>
+          <h3>No hay citas</h3>
+          <p>Selecciona otro día o crea una nueva cita.</p>
+          <button type="button" class="small-primary-button" id="emptyNewAppointment">Crear cita</button>
+        </div>
+      </aside>
+    </main>
+  </div>
+  <div class="modal" id="appointmentModal" aria-hidden="true">
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="modal-card">
+      <div class="modal-header">
+        <div>
+          <span class="eyebrow">NUEVA CITA</span>
+          <h2>Agendar cita</h2>
+        </div>
+        <button type="button" class="modal-close" id="closeModal">×</button>
+      </div>
+      <form id="appointmentForm">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="clientName">Nombre</label>
+            <input type="text" id="clientName" placeholder="Nombre del cliente" required>
+          </div>
+          <div class="form-group">
+            <label for="service">Servicio</label>
+            <select id="service" required>
+              <option value="">Seleccionar</option>
+              <option>Consulta</option>
+              <option>Reunión</option>
+              <option>Asesoría</option>
+              <option>Seguimiento</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="appointmentDate">Fecha</label>
+            <input type="date" id="appointmentDate" required>
+          </div>
+          <div class="form-group">
+            <label for="appointmentTime">Hora</label>
+            <input type="time" id="appointmentTime" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="appointmentStatus">Estado</label>
+          <select id="appointmentStatus">
+            <option value="confirmed">Confirmada</option>
+            <option value="pending">Pendiente</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="notes">Notas</label>
+          <textarea id="notes" rows="4" placeholder="Información adicional..."></textarea>
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="secondary-button" id="cancelButton">Cancelar</button>
+          <button type="submit" class="primary-button">Guardar cita</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="toast" id="toast">Cita guardada correctamente</div>
+  <script src="script.js"></script>
+</body>
+</html>

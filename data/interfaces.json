@@ -52,7 +52,7 @@
       "JavaScript"
     ],
     "status": "ready",
-    "folder": "004-verificacion-2fa",
+    "folder": "004-verificacion",
     "demo": "interfaces/004-verificacion-2fa/"
   },
   {
@@ -65,8 +65,8 @@
       "CSS3",
       "JavaScript"
     ],
-    "status": "pending",
-    "folder": "005-perfil-de-usuario",
+    "status": "ready",
+    "folder": "005-perfil-usuario",
     "demo": "interfaces/005-perfil-de-usuario/"
   },
   {
@@ -79,7 +79,7 @@
       "CSS3",
       "JavaScript"
     ],
-    "status": "pending",
+    "status": "ready",
     "folder": "006-editar-perfil",
     "demo": "interfaces/006-editar-perfil/"
   },
@@ -723,8 +723,8 @@
       "CSS3",
       "JavaScript"
     ],
-    "status": "pending",
-    "folder": "052-tarjeta-de-noticia",
+    "status": "ready",
+    "folder": "052-tarjeta-noticia",
     "demo": "interfaces/052-tarjeta-de-noticia/"
   },
   {
@@ -1339,8 +1339,8 @@
       "CSS3",
       "JavaScript"
     ],
-    "status": "pending",
-    "folder": "096-calendario-con-citas",
+    "status": "ready",
+    "folder": "096-calendario-citas",
     "demo": "interfaces/096-calendario-con-citas/"
   },
   {

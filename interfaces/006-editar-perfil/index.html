@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Interfaz responsive para editar perfil de usuario.">
+  <title>Editar Perfil</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <header class="header">
+      <a href="../../" class="brand">
+        <span class="brand-icon">P</span>
+        <span>Profile<span>Desk</span></span>
+      </a>
+      <div class="header-actions">
+        <button type="button" class="ghost-button" id="resetButton">Restablecer</button>
+        <button type="button" class="primary-button" id="headerSaveButton">Guardar cambios</button>
+      </div>
+    </header>
+    <div class="layout">
+      <aside class="sidebar">
+        <div class="sidebar-title">
+          <span>CONFIGURACIÓN</span>
+          <h1>Editar perfil</h1>
+        </div>
+        <nav class="sidebar-nav">
+          <button class="nav-item active" data-section="personal">
+            <span class="nav-icon">◉</span>
+            Información personal
+          </button>
+          <button class="nav-item" data-section="professional">
+            <span class="nav-icon">◇</span>
+            Perfil profesional
+          </button>
+          <button class="nav-item" data-section="social">
+            <span class="nav-icon">↗</span>
+            Redes sociales
+          </button>
+          <button class="nav-item" data-section="preferences">
+            <span class="nav-icon">⚙</span>
+            Preferencias
+          </button>
+        </nav>
+        <div class="sidebar-help">
+          <span>¿Necesitas ayuda?</span>
+          <p>Completa los datos que deseas mostrar en tu perfil.</p>
+        </div>
+      </aside>
+      <section class="content">
+        <section class="profile-header">
+          <div class="avatar-area">
+            <div class="avatar" id="avatarPreview">FD</div>
+            <div>
+              <strong>Foto de perfil</strong>
+              <p>PNG o JPG. Máximo 5 MB.</p>
+              <div class="avatar-actions">
+                <label for="avatarInput" class="upload-button">Cambiar foto</label>
+                <input type="file" id="avatarInput" accept="image/png,image/jpeg" hidden>
+                <button type="button" class="remove-button" id="removeAvatarButton">Eliminar</button>
+              </div>
+            </div>
+          </div>
+          <div class="completion">
+            <span>Perfil completado</span>
+            <strong id="completionValue">80%</strong>
+            <div class="completion-bar">
+              <span id="completionBar" style="width: 80%"></span>
+            </div>
+          </div>
+        </section>
+        <form id="profileForm" novalidate>
+          <section class="form-section active" id="personal">
+            <div class="section-heading">
+              <div>
+                <span class="section-kicker">INFORMACIÓN PERSONAL</span>
+                <h2>Datos básicos</h2>
+                <p>Esta información aparecerá en tu perfil público.</p>
+              </div>
+            </div>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="firstName">Nombre</label>
+                <input type="text" id="firstName" value="Favio" required>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Apellido</label>
+                <input type="text" id="lastName" value="Diaz" required>
+              </div>
+              <div class="form-group full">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" value="favio@example.com" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Teléfono</label>
+                <input type="tel" id="phone" placeholder="+51 999 999 999">
+              </div>
+              <div class="form-group">
+                <label for="location">Ubicación</label>
+                <input type="text" id="location" value="Lima, Perú">
+              </div>
+              <div class="form-group full">
+                <label for="bio">Biografía</label>
+                <textarea id="bio" rows="5" maxlength="240" placeholder="Cuéntanos sobre ti...">Desarrollador frontend enfocado en crear interfaces modernas, claras y responsive.</textarea>
+                <div class="field-bottom">
+                  <span>Máximo 240 caracteres</span>
+                  <strong id="bioCounter">82/240</strong>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="form-section" id="professional">
+            <div class="section-heading">
+              <div>
+                <span class="section-kicker">PERFIL PROFESIONAL</span>
+                <h2>Información laboral</h2>
+                <p>Añade tu rol, empresa y especialidad.</p>
+              </div>
+            </div>
+            <div class="form-grid">
+              <div class="form-group full">
+                <label for="jobTitle">Cargo o especialidad</label>
+                <input type="text" id="jobTitle" value="Frontend Developer">
+              </div>
+              <div class="form-group">
+                <label for="company">Empresa</label>
+                <input type="text" id="company" placeholder="Nombre de empresa">
+              </div>
+              <div class="form-group">
+                <label for="experience">Experiencia</label>
+                <select id="experience">
+                  <option value="">Seleccionar</option>
+                  <option>Menos de 1 año</option>
+                  <option selected>1 - 2 años</option>
+                  <option>3 - 5 años</option>
+                  <option>Más de 5 años</option>
+                </select>
+              </div>
+              <div class="form-group full">
+                <label for="website">Sitio web</label>
+                <input type="url" id="website" placeholder="https://...">
+              </div>
+              <div class="form-group full">
+                <label>Tecnologías</label>
+                <div class="skills">
+                  <label class="skill-chip">
+                    <input type="checkbox" checked>
+                    <span>HTML5</span>
+                  </label>
+                  <label class="skill-chip">
+                    <input type="checkbox" checked>
+                    <span>CSS3</span>
+                  </label>
+                  <label class="skill-chip">
+                    <input type="checkbox" checked>
+                    <span>JavaScript</span>
+                  </label>
+                  <label class="skill-chip">
+                    <input type="checkbox">
+                    <span>React</span>
+                  </label>
+                  <label class="skill-chip">
+                    <input type="checkbox">
+                    <span>TypeScript</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="form-section" id="social">
+            <div class="section-heading">
+              <div>
+                <span class="section-kicker">REDES</span>
+                <h2>Presencia digital</h2>
+                <p>Añade enlaces a tus perfiles profesionales.</p>
+              </div>
+            </div>
+            <div class="social-fields">
+              <div class="social-field">
+                <div class="social-icon github">GH</div>
+                <div>
+                  <label for="github">GitHub</label>
+                  <input type="url" id="github" placeholder="https://github.com/usuario">
+                </div>
+              </div>
+              <div class="social-field">
+                <div class="social-icon linkedin">in</div>
+                <div>
+                  <label for="linkedin">LinkedIn</label>
+                  <input type="url" id="linkedin" placeholder="https://linkedin.com/in/usuario">
+                </div>
+              </div>
+              <div class="social-field">
+                <div class="social-icon web">WWW</div>
+                <div>
+                  <label for="portfolio">Portafolio</label>
+                  <input type="url" id="portfolio" placeholder="https://miportafolio.com">
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="form-section" id="preferences">
+            <div class="section-heading">
+              <div>
+                <span class="section-kicker">PREFERENCIAS</span>
+                <h2>Privacidad y notificaciones</h2>
+                <p>Configura cómo quieres utilizar tu perfil.</p>
+              </div>
+            </div>
+            <div class="preferences-list">
+              <label class="preference">
+                <div>
+                  <strong>Perfil público</strong>
+                  <p>Permitir que otras personas puedan ver tu perfil.</p>
+                </div>
+                <input type="checkbox" class="switch-input" checked>
+                <span class="switch"></span>
+              </label>
+              <label class="preference">
+                <div>
+                  <strong>Mostrar correo</strong>
+                  <p>Mostrar tu correo electrónico en el perfil público.</p>
+                </div>
+                <input type="checkbox" class="switch-input">
+                <span class="switch"></span>
+              </label>
+              <label class="preference">
+                <div>
+                  <strong>Notificaciones</strong>
+                  <p>Recibir novedades relacionadas con tu cuenta.</p>
+                </div>
+                <input type="checkbox" class="switch-input" checked>
+                <span class="switch"></span>
+              </label>
+            </div>
+          </section>
+          <div class="form-actions">
+            <span class="save-status" id="saveStatus">Sin cambios pendientes</span>
+            <div>
+              <button type="button" class="ghost-button" id="cancelChangesButton">Cancelar</button>
+              <button type="submit" class="primary-button">Guardar cambios</button>
+            </div>
+          </div>
+        </form>
+      </section>
+      <aside class="preview-panel">
+        <span class="preview-label">VISTA PREVIA</span>
+        <article class="preview-card">
+          <div class="preview-cover"></div>
+          <div class="preview-content">
+            <div class="preview-avatar" id="previewAvatar">FD</div>
+            <h3 id="previewName">Favio Diaz</h3>
+            <p class="preview-role" id="previewRole">Frontend Developer</p>
+            <p class="preview-bio" id="previewBio">Desarrollador frontend enfocado en crear interfaces modernas, claras y responsive.</p>
+            <div class="preview-location">
+              <span>◉</span>
+              <span id="previewLocation">Lima, Perú</span>
+            </div>
+            <div class="preview-tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+          </div>
+        </article>
+      </aside>
+    </div>
+  </main>
+  <div class="toast" id="toast">Perfil actualizado correctamente</div>
+  <script src="script.js"></script>
+</body>
+</html>

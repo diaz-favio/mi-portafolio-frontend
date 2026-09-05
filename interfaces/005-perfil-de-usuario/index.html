@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Interfaz moderna y responsive de perfil de usuario.">
+  <title>Perfil de Usuario</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <a href="../../" class="logo">
+          <span class="logo-icon">&lt;/&gt;</span>
+          <span>Favio<span>UI</span></span>
+        </a>
+      </div>
+      <nav class="sidebar-menu">
+        <a href="#" class="menu-item active">
+          <span class="menu-icon">◉</span>
+          <span>Perfil</span>
+        </a>
+        <a href="#" class="menu-item">
+          <span class="menu-icon">▦</span>
+          <span>Proyectos</span>
+        </a>
+        <a href="#" class="menu-item">
+          <span class="menu-icon">♧</span>
+          <span>Mensajes</span>
+          <span class="menu-badge">4</span>
+        </a>
+        <a href="#" class="menu-item">
+          <span class="menu-icon">♢</span>
+          <span>Notificaciones</span>
+        </a>
+        <a href="#" class="menu-item">
+          <span class="menu-icon">⚙</span>
+          <span>Configuración</span>
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <button type="button" class="theme-button" id="themeButton">
+          <span id="themeIcon">☾</span>
+          <span id="themeText">Modo claro</span>
+        </button>
+      </div>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <button type="button" class="mobile-menu-button" id="mobileMenuButton" aria-label="Abrir menú">☰</button>
+        <div>
+          <span class="page-label">CUENTA</span>
+          <h1>Mi perfil</h1>
+        </div>
+        <div class="topbar-actions">
+          <button type="button" class="icon-button" aria-label="Notificaciones">
+            ♢
+            <span class="notification-dot"></span>
+          </button>
+          <div class="small-profile">
+            <div class="small-avatar">FD</div>
+            <div class="small-profile-text">
+              <strong id="topName">Favio Diaz</strong>
+              <span>Frontend Developer</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="content">
+        <section class="profile-card">
+          <div class="cover">
+            <div class="cover-decoration cover-decoration-1"></div>
+            <div class="cover-decoration cover-decoration-2"></div>
+          </div>
+          <div class="profile-info">
+            <div class="profile-avatar-wrapper">
+              <div class="profile-avatar" id="profileAvatar">FD</div>
+              <span class="online-indicator"></span>
+            </div>
+            <div class="profile-main-info">
+              <div>
+                <h2 id="profileName">Favio Diaz</h2>
+                <p id="profileRole">Frontend Developer</p>
+              </div>
+              <button type="button" class="primary-button" id="editProfileButton">Editar perfil</button>
+            </div>
+            <p class="profile-bio" id="profileBio">Desarrollador frontend enfocado en crear interfaces web modernas, responsive y fáciles de utilizar con HTML, CSS y JavaScript.</p>
+            <div class="profile-meta">
+              <span>◉ Lima, Perú</span>
+              <span>◇ Disponible</span>
+              <span>♧ favio.dev</span>
+            </div>
+          </div>
+        </section>
+        <section class="stats-grid">
+          <article class="stat-card">
+            <div class="stat-icon">▦</div>
+            <div>
+              <span>Proyectos</span>
+              <strong>24</strong>
+            </div>
+            <span class="stat-change positive">+4</span>
+          </article>
+          <article class="stat-card">
+            <div class="stat-icon">◇</div>
+            <div>
+              <span>Seguidores</span>
+              <strong>1.2K</strong>
+            </div>
+            <span class="stat-change positive">+12%</span>
+          </article>
+          <article class="stat-card">
+            <div class="stat-icon">♧</div>
+            <div>
+              <span>Visualizaciones</span>
+              <strong>8.4K</strong>
+            </div>
+            <span class="stat-change positive">+18%</span>
+          </article>
+          <article class="stat-card">
+            <div class="stat-icon">★</div>
+            <div>
+              <span>Valoración</span>
+              <strong>4.9</strong>
+            </div>
+            <span class="stat-change">/5</span>
+          </article>
+        </section>
+        <div class="dashboard-grid">
+          <section class="panel">
+            <div class="panel-header">
+              <div>
+                <span class="panel-label">INFORMACIÓN</span>
+                <h3>Datos personales</h3>
+              </div>
+            </div>
+            <div class="info-list">
+              <div class="info-row">
+                <span>Nombre</span>
+                <strong id="infoName">Favio Diaz</strong>
+              </div>
+              <div class="info-row">
+                <span>Correo</span>
+                <strong id="infoEmail">favio@example.com</strong>
+              </div>
+              <div class="info-row">
+                <span>Rol</span>
+                <strong id="infoRole">Frontend Developer</strong>
+              </div>
+              <div class="info-row">
+                <span>Ubicación</span>
+                <strong>Lima, Perú</strong>
+              </div>
+              <div class="info-row">
+                <span>Estado</span>
+                <strong class="available">● Disponible</strong>
+              </div>
+            </div>
+          </section>
+          <section class="panel">
+            <div class="panel-header">
+              <div>
+                <span class="panel-label">STACK</span>
+                <h3>Tecnologías</h3>
+              </div>
+            </div>
+            <div class="skills">
+              <div class="skill">
+                <div class="skill-top">
+                  <div>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5">
+                    <span>HTML5</span>
+                  </div>
+                  <strong>92%</strong>
+                </div>
+                <div class="progress">
+                  <span style="width: 92%"></span>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-top">
+                  <div>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS3">
+                    <span>CSS3</span>
+                  </div>
+                  <strong>88%</strong>
+                </div>
+                <div class="progress">
+                  <span style="width: 88%"></span>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-top">
+                  <div>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript">
+                    <span>JavaScript</span>
+                  </div>
+                  <strong>80%</strong>
+                </div>
+                <div class="progress">
+                  <span style="width: 80%"></span>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <section class="panel activity-panel">
+          <div class="panel-header">
+            <div>
+              <span class="panel-label">ACTIVIDAD</span>
+              <h3>Actividad reciente</h3>
+            </div>
+            <button type="button" class="text-button">Ver todo</button>
+          </div>
+          <div class="activity-list">
+            <div class="activity-item">
+              <div class="activity-icon">✓</div>
+              <div class="activity-content">
+                <strong>Proyecto actualizado</strong>
+                <p>Actualizaste la interfaz Login Moderno.</p>
+              </div>
+              <span class="activity-time">Hace 20 min</span>
+            </div>
+            <div class="activity-item">
+              <div class="activity-icon">+</div>
+              <div class="activity-content">
+                <strong>Nuevo proyecto</strong>
+                <p>Agregaste una nueva interfaz a tu portafolio.</p>
+              </div>
+              <span class="activity-time">Hace 2 h</span>
+            </div>
+            <div class="activity-item">
+              <div class="activity-icon">★</div>
+              <div class="activity-content">
+                <strong>Nueva valoración</strong>
+                <p>Uno de tus proyectos recibió una valoración.</p>
+              </div>
+              <span class="activity-time">Ayer</span>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  <div class="modal" id="editModal" aria-hidden="true">
+    <div class="modal-overlay"></div>
+    <div class="modal-card">
+      <div class="modal-header">
+        <div>
+          <span class="panel-label">PERFIL</span>
+          <h3>Editar información</h3>
+        </div>
+        <button type="button" class="modal-close" id="closeModalButton" aria-label="Cerrar">×</button>
+      </div>
+      <form id="editProfileForm">
+        <div class="form-group">
+          <label for="nameInput">Nombre</label>
+          <input type="text" id="nameInput" value="Favio Diaz" required>
+        </div>
+        <div class="form-group">
+          <label for="roleInput">Rol</label>
+          <input type="text" id="roleInput" value="Frontend Developer" required>
+        </div>
+        <div class="form-group">
+          <label for="emailInput">Correo</label>
+          <input type="email" id="emailInput" value="favio@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="bioInput">Descripción</label>
+          <textarea id="bioInput" rows="4">Desarrollador frontend enfocado en crear interfaces web modernas, responsive y fáciles de utilizar con HTML, CSS y JavaScript.</textarea>
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="secondary-button" id="cancelButton">Cancelar</button>
+          <button type="submit" class="primary-button">Guardar cambios</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
