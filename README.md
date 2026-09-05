@@ -14,8 +14,16 @@ Las interfaces están dentro de la carpeta `Interfaz Frontend`:
  ![Login](Capturas/Login.png)
  
 - **Recuperar_Contraseña**: Flujo de recuperación de contraseña.
+
+![Login](Capturas/Recuperar.png)
+  
 - **Registro_Usuario**: Formulario de registro.
+
+ ![Login](Capturas/Registre.png)
+  
 - **Verificación_2FA**: Autenticación de dos factores.
-- 
+
+ ![Login](Capturas/Verificacion.png)
+
 ## 📫 Contacto
 - **Correo**: faviodiaznapan@gmail.com
