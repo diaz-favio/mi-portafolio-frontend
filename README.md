@@ -16,9 +16,6 @@ Las interfaces están dentro de la carpeta `Interfaz Frontend`:
 - **Recuperar_Contraseña**: Flujo de recuperación de contraseña.
 - **Registro_Usuario**: Formulario de registro.
 - **Verificación_2FA**: Autenticación de dos factores.
-
-## 🚀 Demo en vivo
-[Haz clic aquí para ver mi página](https://diaz-favio.github.io/tu-nombre-de-repo/)
-
+- 
 ## 📫 Contacto
 - **Correo**: faviodiaznapan@gmail.com
