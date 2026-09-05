@@ -17,10 +17,8 @@ Las interfaces están dentro de la carpeta `Interfaz Frontend`:
 - **Registro_Usuario**: Formulario de registro.
 - **Verificación_2FA**: Autenticación de dos factores.
 
-## 🚀 Cómo ejecutar el proyecto
-1. Descarga el repositorio.
-2. Ve a la carpeta `Interfaz Frontend`.
-3. Abre `index.html` en tu navegador.
+## 🚀 Demo en vivo
+[Haz clic aquí para ver mi página](https://diaz-favio.github.io/tu-nombre-de-repo/)
 
 ## 📫 Contacto
 - **Correo**: faviodiaznapan@gmail.com
