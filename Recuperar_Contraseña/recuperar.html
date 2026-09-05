@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Recuperar contraseña">
+    <title>Recuperar contraseña</title>
+    <link rel="stylesheet" href="recuperar.css">
+</head>
+<body>
+    <main class="recovery-page">
+        <section class="welcome-panel">
+            <div class="decoration decoration-1"></div>
+            <div class="decoration decoration-2"></div>
+            <div class="decoration decoration-3"></div>
+
+            <div class="brand">
+                <div class="brand-logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="18" height="18" rx="5" />
+                        <path d="M8 12h8" />
+                        <path d="m13 9 3 3-3 3" />
+                    </svg>
+                </div>
+                <span>Pagina Web</span>
+            </div>
+
+            <div class="welcome-content">
+                <div class="badge">
+                    <span class="badge-dot"></span>
+                    Recuperación segura
+                </div>
+
+                <h1>
+                    Recupera el acceso
+                    <span>a tu cuenta.</span>
+                </h1>
+
+                <p>
+                    Ingresa el correo asociado a tu cuenta.
+                    Te enviaremos las instrucciones necesarias
+                    para restablecer tu contraseña.
+                </p>
+
+                <div class="features">
+                    <div class="feature">
+                        <div class="feature-icon">✓</div>
+                        <div>
+                            <strong>Proceso seguro</strong>
+                            <p>Protegemos la recuperación de tu cuenta.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature">
+                        <div class="feature-icon">✓</div>
+                        <div>
+                            <strong>Rápido y sencillo</strong>
+                            <p>Recibe las instrucciones directamente.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature">
+                        <div class="feature-icon">✓</div>
+                        <div>
+                            <strong>Acceso protegido</strong>
+                            <p>Solo tú podrás restablecer tu contraseña.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="welcome-footer">
+                © 2026 Favio Diaz. Todos los derechos reservados.
+            </div>
+        </section>
+
+        <section class="recovery-container">
+            <div class="recovery-box">
+                <div class="mobile-brand">
+                    <div class="brand-logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="5" />
+                            <path d="M8 12h8" />
+                            <path d="m13 9 3 3-3 3" />
+                        </svg>
+                    </div>
+                    <span>Recupera tu contraseña</span>
+                </div>
+
+                <div class="recovery-header">
+                    <div class="recovery-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="10" rx="2" />
+                            <path d="M7 11V7a5 5 0 0 1 9.5-2" />
+                            <path d="M21 2v6h-6" />
+                            <path d="M21 8a9 9 0 0 0-15-4" />
+                        </svg>
+                    </div>
+
+                    <div>
+                        <h2>Recuperar contraseña</h2>
+                        <p>Te ayudaremos a recuperar tu cuenta.</p>
+                    </div>
+                </div>
+
+                <div class="recovery-info">
+                    <div class="info-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 16v-4" />
+                            <path d="M12 8h.01" />
+                        </svg>
+                    </div>
+
+                    <p>
+                        Ingresa tu correo electrónico y te enviaremos
+                        un enlace para crear una nueva contraseña.
+                    </p>
+                </div>
+
+                <form id="recoveryForm" novalidate>
+                    <div class="form-group">
+                        <label for="email">Correo electrónico</label>
+
+                        <div class="input-container">
+                            <span class="input-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="4" width="20" height="16" rx="2" />
+                                    <path d="m22 7-8.97 5.7a2 2 0 0 1-2.06 0L2 7" />
+                                </svg>
+                            </span>
+
+                            <input type="email" id="email" name="email" placeholder="usuario@correo.com" autocomplete="email">
+                        </div>
+
+                        <span id="emailError" class="error-message"></span>
+                    </div>
+
+                    <button type="submit" class="recovery-button" id="recoveryButton">
+                        <span id="recoveryText">Enviar instrucciones</span>
+                        <span class="loader" id="loader"></span>
+                        <svg class="button-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14" />
+                            <path d="m13 6 6 6-6 6" />
+                        </svg>
+                    </button>
+
+                    <div class="form-status" id="formStatus"></div>
+                </form>
+
+                <a href="index.html" class="back-login">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5" />
+                        <path d="m11 18-6-6 6-6" />
+                    </svg>
+                    Volver a iniciar sesión
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <script src="recuperar.js"></script>
+</body>
+</html>
