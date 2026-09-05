@@ -11,7 +11,7 @@
 Las interfaces están dentro de la carpeta `Interfaz Frontend`:
 - **Iniciar sesión_Moderno**: Pantalla de login moderna.
   
- ![Login](capturas/Login.png)
+ ![Login](Capturas/Login.png)
  
 - **Recuperar_Contraseña**: Flujo de recuperación de contraseña.
 - **Registro_Usuario**: Formulario de registro.
